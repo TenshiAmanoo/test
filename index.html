@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ghazy - Portfolio</title>
+
+    <!-- Tailwind (CDN) + custom theme config -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- ==================== TOP NAVIGATION ==================== -->
+    <nav id="mainNav" class="bg-background dark:bg-background border-b border-secondary dark:border-outline fixed w-full top-0 z-50 flex justify-between items-center px-margin-desktop py-4 max-w-full transition-all duration-300 shadow-sm">
+        <div class="font-headline-lg text-headline-lg-mobile uppercase tracking-tighter text-on-background dark:text-inverse-on-surface">
+            M. GHAZY
+        </div>
+
+        <div class="hidden md:flex gap-6 items-center">
+            <a href="#work" class="font-label-bold text-label-bold text-secondary hover:text-on-background hover:text-primary transition-colors duration-200">Work</a>
+            <a href="#about" class="font-label-bold text-label-bold text-secondary hover:text-on-background hover:text-primary transition-colors duration-200">About</a>
+            <a href="#experience" class="font-label-bold text-label-bold text-secondary hover:text-on-background hover:text-primary transition-colors duration-200">Experience</a>
+            <a href="#about" class="font-label-bold text-label-bold text-secondary hover:text-on-background hover:text-primary transition-colors duration-200">Contact</a>
+            <a href="#about" class="inline-block bg-primary-container text-on-primary-container font-label-bold text-label-bold px-6 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-all duration-300">
+                Hire Me
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-on-background">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+    </nav>
+
+    <!-- ==================== SIDE META (RIGHT RAIL) ==================== -->
+    <div class="fixed right-0 top-0 h-full w-[60px] hidden xl:flex flex-col items-center justify-end pb-8 z-40 pointer-events-none">
+        <span class="font-vertical-meta text-vertical-meta text-secondary vertical-text tracking-widest uppercase">
+            RANDY © 2025
+        </span>
+    </div>
+
+    <!-- ==================== MAIN CONTAINER ==================== -->
+    <main class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-[100px]">
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="relative min-h-[90vh] flex flex-col md:flex-row items-center justify-center pt-12 pb-section-padding border-b border-secondary/30">
+            <div class="absolute top-10 left-10 opacity-10 font-display-xl text-display-xl z-0">01</div>
+
+            <div class="w-full md:w-1/2 relative z-10 flex flex-col items-start px-4 md:px-12">
+                <div class="inline-block bg-primary-container px-4 py-1 rounded-full mb-4 rotate-[-3deg] border border-on-background">
+                    <span class="font-label-bold text-label-bold text-on-background">Creative Visual</span>
+                </div>
+
+                <h1 class="font-headline-lg text-[100px] md:text-[190px] leading-[0.82] text-primary-container hero-title-shadow tracking-tighter uppercase relative">
+                    PORTO
+                    <!-- Doodle accents around PORTO -->
+                    <svg class="absolute -top-14 left-24 w-20 h-20 opacity-80" viewBox="0 0 100 100">
+                        <path class="doodle-stroke" d="M30 70 L50 30 L70 70 M20 50 L80 50"></path>
+                        <circle class="doodle-stroke" cx="50" cy="50" r="40"></circle>
+                    </svg>
+                </h1>
+
+                <h1 class="font-headline-lg text-[100px] md:text-[190px] leading-[0.82] text-on-background tracking-tighter uppercase ml-0 md:ml-16 relative">
+                    FOLiO<span class="text-primary-container">.</span>
+                    <!-- Doodle accents around FOLiO -->
+                    <svg class="absolute -bottom-10 -right-10 w-14 h-14 opacity-80" viewBox="0 0 100 100">
+                        <path class="doodle-stroke" d="M20 20 L80 80 M80 20 L20 80"></path>
+                    </svg>
+                </h1>
+
+                <div class="mt-12 flex items-center gap-4 border-t border-secondary/30 pt-4 w-full">
+                    <div class="w-12 h-12 rounded-full border-2 border-on-background flex items-center justify-center hover:bg-primary-container hover:text-on-background transition-colors cursor-pointer group">
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </div>
+                    <div>
+                        <p class="font-label-bold text-label-bold">Muhammad Ghazy</p>
+                        <p class="font-body-sm text-body-sm text-secondary">An ordinary Artist</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 relative mt-12 md:mt-0 flex justify-center items-center h-[500px] z-10">
+                <!-- Background graphic shape -->
+                <div class="absolute inset-0 bg-primary-container rounded-[100px] rotate-[15deg] scale-75 opacity-90 border-4 border-on-background"></div>
+
+                <!-- Foto hero (TEMPLATE): taruh file kamu di assets/hero.png, atau ganti src di bawah.
+                     Selama file belum ada, kotak placeholder di bawahnya yang tampil. -->
+                <div class="relative z-10 w-[240px] md:w-[300px] aspect-square rounded-full border-4 border-on-background bg-surface shadow-[8px_8px_0_#1a1c1c] overflow-hidden">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 px-8 text-center text-secondary">
+                        <span class="material-symbols-outlined text-[56px]">add_photo_alternate</span>
+                        <span class="font-label-bold text-label-bold">Ganti foto<br>assets/hero.png</span>
+                    </div>
+                    <img src="assets/hero.png" alt="Foto Muhammad Ghazy"
+                         class="absolute inset-0 w-full h-full object-cover"
+                         onerror="this.remove()">
+                </div>
+
+                <!-- Floating doodle icons -->
+                <div class="absolute top-10 left-10 bg-surface rounded-lg p-2 border border-on-background shadow-[4px_4px_0_#1a1c1c] rotate-[-10deg]">
+                    <span class="material-symbols-outlined text-3xl">desktop_mac</span>
+                </div>
+                <div class="absolute bottom-20 right-10 bg-primary-container rounded-lg p-2 border border-on-background shadow-[4px_4px_0_#1a1c1c] rotate-[15deg]">
+                    <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT & EXPERIENCE SECTION ==================== -->
+        <section id="about" class="relative py-section-padding border-b border-secondary/30 flex flex-col xl:flex-row gap-12">
+            <div class="absolute -top-8 left-10 opacity-10 font-display-xl text-display-xl z-0 pointer-events-none">02</div>
+
+            <!-- Section header -->
+            <div class="w-full xl:w-auto xl:absolute xl:top-section-padding xl:left-0 flex items-center gap-4 z-10 bg-tertiary-fixed pr-4">
+                <h2 class="font-section-title text-section-title uppercase tracking-widest">About</h2>
+                <div class="w-8 h-8 rounded-full border border-on-background flex items-center justify-center">
+                    <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+
+            <!-- Left column: photo + contact card -->
+            <div class="w-full xl:w-1/3 relative z-10 mt-16 xl:mt-0">
+                <div class="relative w-full aspect-[3/4] bg-surface-container rounded-lg overflow-hidden border border-on-background shadow-[8px_8px_0_#ffb800]">
+                    <div id="aboutSlideshow" data-slideshow="about"
+                         class="absolute inset-0"
+                         role="img"
+                         aria-label="Portrait of Muhammad Ghazy">
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-surface border border-on-background p-6 shadow-[4px_4px_0_#1a1c1c]">
+                    <h3 class="font-section-title text-section-title mb-4 border-b border-secondary/30 pb-2">Let's Work Together :</h3>
+                    <div class="flex gap-4">
+                        <div class="w-24 h-24 bg-surface-container border border-secondary flex-shrink-0">
+                            <img class="w-full h-full object-cover p-2"
+                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYSQHS-iXFfB79Xs18UdY-llDFQ3wthoPgvcDApNAJRlXXTMnp5xrqvJ-Wdxi5ZhV1VbQvsI6DQc3UpuAsJVyfY9ldZOUYP2Bi_7V3rRAnshZvsSUB6RrvCZABDwYqo-1Cd0Vv8fz-mRGLSmwkE3QtWaQ2lKIw6RRmJOPMTllTrl6iPo0pKq7TPbWItCZuFYVGrT-onP6ucuz-UNNZB0jhkn3I1h73RFuwELy3qdskZmel0b-7xqvsHN-6t3fUB9TEgdeD7bI1rbyrAMY"
+                                 alt="QR code linking to Muhammad Ghazy's contact details">
+                        </div>
+                        <div class="flex flex-col gap-2 justify-center">
+                            <a href="mailto:takigawamiusan@gmail.com" class="font-body-sm text-body-sm flex items-center gap-2 hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-base">mail</span>takigawamiusan@gmail.com
+                            </a>
+                            <a href="tel:+6282223286634" class="font-body-sm text-body-sm flex items-center gap-2 hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-base">call</span> +62 822 2328 6634
+                            </a>
+                            <a href="#" class="font-body-sm text-body-sm flex items-center gap-2 hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-base">photo_camera</span> @seara.domoo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right column: bio + education + skills + experience -->
+            <div class="w-full xl:w-2/3 xl:pl-12 pt-16 z-10 flex flex-col gap-12">
+
+                <!-- Intro -->
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-background mb-6 relative inline-block">
+                        <span class="text-primary-container absolute -left-6 -top-4 font-display-xl text-[60px]">"</span>
+                        HELLO<span class="text-primary-container">.</span>
+                    </h2>
+                    <p class="font-body-md text-body-md max-w-2xl leading-relaxed mb-4">
+                        I'm <b>Muhammad Ghazy</b>, a self-taught graphic designer, IT &amp; artist with over 9 years of experience. I love creating visuals that don't just look good - they tell a story. From social media content to brochures and billboards, I enjoy bringing ideas to life.
+                    </p>
+                    <p class="font-body-md text-body-md max-w-2xl leading-relaxed">
+                        I also explore photography and videography to add more depth to my work. For me, design is all about connecting ideas with people in a creative way.
+                    </p>
+                </div>
+
+                <!-- Education & Skills -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Education -->
+                    <div>
+                        <h3 class="font-section-title text-section-title mb-4 border-b-2 border-on-background inline-block pb-1">Education</h3>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="font-headline-lg text-headline-lg text-secondary opacity-50 leading-none">SMP</div>
+                            <div>
+                                <h4 class="font-label-bold text-label-bold">SMP Negeri 4 Purbalingga</h4>
+                                <p class="font-body-sm text-body-sm text-secondary">Public Junior School in Purbalingga</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start mt-4">
+                            <div class="font-headline-lg text-headline-lg text-secondary opacity-50 leading-none">SMK</div>
+                            <div>
+                                <h4 class="font-label-bold text-label-bold">SMK Telkom Purwokerto</h4>
+                                <p class="font-body-sm text-body-sm text-secondary">
+                                    Vocational school specializing<br>
+                                    in Information and Communication<br>
+                                    technology
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software Skills -->
+                    <div>
+                        <h3 class="font-section-title text-section-title mb-4 border-b-2 border-on-background inline-block pb-1">Software Skill</h3>
+                        <div class="grid grid-cols-4 gap-2 max-w-[200px]">
+                            <div class="aspect-square bg-surface-container border border-on-background rounded-sm flex items-center justify-center overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6vAe5FpV-Dp508Bcj7ieGGBS54nMjWO4FXF38prNh327T7FG62w51twBb5JVh3g6qvlOyL6unEdnq2dpYhGsv19KXw8qVMMbzG-0Cypranct8nKcYoyJBzNIeGaA9zt5QA8xccQICsDFO9S6nGTNgQCVIjCj1ZMxtuspfSiXBmLSAyRprXX5tSsrNNJ3vH0YhFcc1_dJgU3EmQSH4hprkKfe-FYPHwTmk3gahmX37mS_Us4WdsgSAksx1RUnxy-48EFCcLPwAU0Cuh6s" alt="Premiere Pro" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square bg-surface-container border border-on-background rounded-sm flex items-center justify-center overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQMfO8WCWGbgkMNTsh1vdq9GCcGPBg7SoUo-h-1c-pUAYH4S0BZ57JTnWVk7EB12cxs8uF76K08l3kkqoXccxMkP47aNpgktYJut10BduZzQJMpM3Oaw_qveaYeZYBOZkoForU56mRyyCjj4tRXKEuwd0jpDXoTrBdeoczcKVS8NOc2eCghGdsHJMQdldqe03zoEd39tg1EAV63QvXLiSJjUAGjqthU12oXy_-b9VG1RBWnAfGPA9UppsoyV5Bo5uHk__jOE6xepMkMGQ" alt="Illustrator" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square bg-surface-container border border-on-background rounded-sm flex items-center justify-center overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8fxqg08vVr3AYEJ7BUdCVdjepzwBNDyK4bQSnuJfh3JItFtT8FIvC2LGBaTViKkKb9FzWpR-kVpUtRzeJYiwRso2dI6Bx2_bMLXqQTkVGC0DhQ5y_ii1vwv6aoCR0JFKHXhstlH_KpizFxnkCH0Frec8I3Sjo1eypE44T93vqpoSU_MhocXBv6xp9knwgM2vAwfQvQblh_bvOQJ3k6qnFo5UiRUc3cSo3O46S-Lu-nPv-tCt1fEL5Dr0fyv883t55DpWhUXSgt4nSW88" alt="Photoshop" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square bg-surface-container border border-on-background rounded-sm flex items-center justify-center overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgy3wYaG_sqiGXh4_h5e6OZePrdVOza36k79A_5eVOxnRoRXANlxFKpNBxW_FWmHF9t4t_P_WxOqJ4X835ZstnaP-adQiNUPLKh0CMuQ6bSooyg_OJ96t-OcZMr8AJRxMSrtsEjflegMuQbVgcIln1xZ3_y5oxqADTC1kU5AULAhJbdSthGKWkEOoU3yPQNW21uzCu2gDLnSD19JBrlVeTonuZcZlWS-JL8ZoJJmL27mJtf8t_T6U0cBhvmi6GnIrO9EaKP8eaj_G4VFM" alt="Lightroom" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square bg-surface-container border border-on-background rounded-sm flex items-center justify-center overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuATZJDB3tfa1CDjX6-Fzt_UHFqXDk1JB1CriXBb4H_BmJZUhLekx-Uq13DJ684rdYumSqktA1azIxSUswwCJkFqXEAhAB9nLqRiAdTnMXAj_wXv-ScLMTSEctNJYmXJ2FbTYfsuXeNxd-zp0KOF_EATqyGTw5iaZ5WMoRxpbEDQTKSsUefts8zfKuDE0pRvBqV2hvfaayoPVExqthpxl9Zriu958W8iDyCAPtSCP-kSA_AsVmYNRKSaQcZxF3X8oylrv6E8Tgq0cV4L34M" alt="Canva" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square bg-surface-container border border-on-background rounded-sm flex items-center justify-center overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl2kXlYmPw102vfLFwkCt-Be_sszLOLp4MY-Sf-1eq7UNhvwzOYYQLQd2Gk4MMRoerWLQqszM3xdyiRqVxFl_2JkD_yd-I6XR90OiQs5AZrfIEM2kHYErLUI3lAqIs9bBXdUAtZzwClyg2PZXC-iYjk6AL1sNEJIwYqRls8CtNCy49Y_vs8S13TpxClDI3eabLHrIX6qZ3fnR4sADUKe7IsKkUlt489cWUTp9uv7NpFsrvbO_M1TEwN6DJN-vjG3QEbuDNrIc3jyACqME" alt="Infinity" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square bg-surface border border-on-background rounded-sm flex items-center justify-center">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2HGDSZps4dlOt_Qzge2117FCcdVf6_8eH0oDArpQFoiF3yimp8ky4JTHDCtA3JEp568jW73yYh9XD2ikd8gTuZGlaJBd2wuuKB66LHevs1GpeHhEutFdBH1-7-eG4paLQqHw-bYQV4W257VoYm1wY0-4DXI_Pi-nUP7GKo2HkK4OFumXrjaTO7apA6cJo0bOLJmKHVNRBPh8uWUJ-OlGd7rHtbN6vN78f1HhmTBc10oFYeE6AssrkpWFV-e3rYVFeODL3MfXDnBAE5_E" alt="Clip Studio Paint" class="w-full h-full object-cover rounded-sm">
+                            </div>
+                            <div class="aspect-square bg-surface border border-on-background rounded-sm flex items-center justify-center">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_mYVwntnyPCO1jEgNsYLic-n_fiy05Cw7-Z6QsKGcN1X5nPOMBDc8OpRIeFFgpDV5IVRV-l2HkuEJ14Yh835PB7ySi9j9DNUYCeF2kiOox6Vs3PN_TOtM6XTtLYkjIzIsMv_F-MfQnmK5eJvPzlqvFiMnwZOzZN8YPf08gFOn_ZhGgXNNkyCbq0ht2NlsRuEeOb7LNE0CvL6cm_hmX971bOjqWcrEHghSF-AmXNfJZ69nB5Mts9jYt4ZcVTIJPYeGN3lrj30I7_AmhmQ" alt="Krita" class="w-full h-full object-cover rounded-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Working Experience -->
+                <div id="experience" class="scroll-mt-24">
+                    <h3 class="font-section-title text-section-title mb-6 border-b-2 border-on-background inline-block pb-1">Experience</h3>
+
+                    <div class="flex flex-col gap-4 mt-4">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-secondary/20 pb-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="font-headline-lg text-headline-lg text-secondary opacity-50 leading-none">ART</div>
+                                <div>
+                                    <h4 class="font-label-bold text-label-bold">Artist</h4>
+                                    <p class="font-body-sm text-body-sm text-secondary">Arknights official</p>
+                                </div>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="font-label-bold text-label-bold bg-surface-container px-3 py-1 rounded-full border border-on-background">2026 - Present</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-secondary/20 pb-4 mt-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="font-headline-lg text-headline-lg text-secondary opacity-50 leading-none">GDF</div>
+                                <div>
+                                    <h4 class="font-label-bold text-label-bold">Graphic designer freelance</h4>
+                                    <p class="font-body-sm text-body-sm text-secondary">Self-employed</p>
+                                </div>
+                            </div>
+                            <div class="mt-2 md:mt-0">
+                                <span class="font-label-bold text-label-bold bg-surface-container px-3 py-1 rounded-full border border-on-background">2020 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TABLE OF CONTENT SECTION ==================== -->
+        <section id="work" class="relative py-section-padding min-h-[60vh]">
+            <div class="w-full flex items-center gap-4 mb-16 z-10 relative">
+                <h2 class="font-section-title text-section-title uppercase tracking-widest">Table Of Content</h2>
+                <div class="w-8 h-8 rounded-full border border-on-background flex items-center justify-center">
+                    <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+
+            <div class="text-center mb-16 relative z-10">
+                <h2 class="font-headline-lg text-[60px] md:text-[100px] leading-none text-on-background uppercase tracking-tighter inline-block relative">
+                    <span class="absolute -left-16 -top-4 opacity-10 scale-150 hidden md:block">" TABLE OF CONTENT.</span>
+                    TABLE <span class="bg-primary-container px-4 text-on-background rotate-[3deg] inline-block border-2 border-on-background shadow-[4px_4px_0_#1a1c1c]">OF</span> CONTENT.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 z-10 relative max-w-2xl mx-auto">
+                <!-- Card 1: Commission -->
+                <button type="button" data-gallery="commission" aria-haspopup="dialog" aria-label="Buka galeri Commission" class="group cursor-pointer w-full block focus-visible:outline-none">
+                    <div class="bg-primary-container rounded-[30px] aspect-square flex items-center justify-center mb-4 border-2 border-on-background shadow-[4px_4px_0_#1a1c1c] transition-transform group-hover:-translate-y-2 group-hover:shadow-[8px_8px_0_#1a1c1c] group-focus-visible:-translate-y-2 group-focus-visible:shadow-[8px_8px_0_#1a1c1c]">
+                        <span class="material-symbols-outlined text-[80px] text-on-background" style="font-variation-settings: 'FILL' 1;">draw</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-label-bold text-label-bold bg-primary-container inline-block px-4 py-1 rounded-full border border-on-background">Commission</h3>
+                    </div>
+                </button>
+
+                <!-- Card 2: Video & Photo Editor -->
+                <button type="button" data-gallery="editor" aria-haspopup="dialog" aria-label="Buka galeri Video dan Photo Editor" class="group cursor-pointer w-full block focus-visible:outline-none">
+                    <div class="bg-primary-container rounded-[30px] aspect-square flex items-center justify-center mb-4 border-2 border-on-background shadow-[4px_4px_0_#1a1c1c] transition-transform group-hover:-translate-y-2 group-hover:shadow-[8px_8px_0_#1a1c1c] group-focus-visible:-translate-y-2 group-focus-visible:shadow-[8px_8px_0_#1a1c1c]">
+                        <div class="relative w-24 h-24">
+                            <span class="material-symbols-outlined text-4xl absolute top-0 left-0" style="font-variation-settings: 'FILL' 1;">image</span>
+                            <span class="material-symbols-outlined text-4xl absolute bottom-0 right-0" style="font-variation-settings: 'FILL' 1;">movie</span>
+                            <span class="material-symbols-outlined text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-label-bold text-label-bold bg-primary-container inline-block px-4 py-1 rounded-full border border-on-background">Video &amp; Photo<br>Editor</h3>
+                    </div>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== GALLERY MODAL ==================== -->
+    <div id="galleryModal" class="gallery-modal fixed inset-0 z-[100] hidden items-center justify-center p-3 md:p-8" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+        <div data-gallery-close class="absolute inset-0 bg-on-background/85 backdrop-blur-sm"></div>
+
+        <div class="gallery-panel relative w-full max-w-5xl max-h-full flex flex-col bg-surface border-2 border-on-background rounded-[30px] shadow-[8px_8px_0_#ffb800] overflow-hidden">
+            <!-- Header -->
+            <div class="flex items-center justify-between gap-4 px-5 md:px-8 py-4 border-b-2 border-on-background bg-primary-container">
+                <div class="min-w-0">
+                    <h3 id="galleryTitle" class="font-headline-lg text-headline-lg-mobile uppercase tracking-tight text-on-background leading-none truncate"></h3>
+                    <p id="gallerySubtitle" class="font-body-sm text-body-sm text-on-primary-container mt-1"></p>
+                </div>
+                <button type="button" data-gallery-close aria-label="Tutup galeri" class="shrink-0 w-11 h-11 rounded-full border-2 border-on-background bg-surface flex items-center justify-center shadow-[3px_3px_0_#1a1c1c] hover:bg-on-background hover:text-surface transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-on-background">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <!-- Viewer -->
+            <div class="relative bg-on-background flex-1 min-h-0">
+                <div id="galleryStage" class="gallery-stage w-full h-[42vh] md:h-[56vh] flex items-center justify-center"></div>
+
+                <button type="button" id="galleryPrev" aria-label="Sebelumnya" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border-2 border-on-background bg-primary-container flex items-center justify-center shadow-[3px_3px_0_#1a1c1c] hover:bg-surface transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface">
+                    <span class="material-symbols-outlined">arrow_back_ios_new</span>
+                </button>
+                <button type="button" id="galleryNext" aria-label="Berikutnya" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border-2 border-on-background bg-primary-container flex items-center justify-center shadow-[3px_3px_0_#1a1c1c] hover:bg-surface transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
+            </div>
+
+            <!-- Caption + counter -->
+            <div class="flex items-center justify-between gap-4 px-5 md:px-8 py-3 border-t-2 border-on-background bg-surface">
+                <p id="galleryCaption" class="font-label-bold text-label-bold truncate"></p>
+                <span id="galleryCounter" class="shrink-0 font-label-bold text-label-bold bg-primary-container px-3 py-1 rounded-full border border-on-background"></span>
+            </div>
+
+            <!-- Thumbnails -->
+            <div id="galleryThumbs" class="flex gap-3 px-5 md:px-8 py-4 overflow-x-auto border-t border-secondary/30 bg-surface-container-low"></div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-secondary dark:border-outline flex flex-col md:flex-row justify-between items-center px-margin-desktop py-base gap-4 w-full z-50 relative mt-20">
+        <div class="font-headline-lg text-headline-lg-mobile text-on-surface dark:text-inverse-on-surface">M. GHAZY</div>
+        <div class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed-dim">
+            © 2026 M. GHAZY. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Page interactions -->
+    <script src="script.js"></script>
+</body>
+</html>

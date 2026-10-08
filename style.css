@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+body {
+    background-color: #e2e2e2;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Doodle / decorative strokes
+   ========================================================================== */
+.doodle-stroke {
+    stroke: #1a1c1c;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ==========================================================================
+   Vertical side text (right rail)
+   ========================================================================== */
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   Big faded section number watermark
+   ========================================================================== */
+.section-watermark {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 200px;
+    color: #1a1c1c;
+}
+
+/* ==========================================================================
+   Hero title shadow
+   ========================================================================== */
+.hero-title-shadow {
+    text-shadow: 4px 4px 0 #1a1c1c;
+}
+
+/* ==========================================================================
+   Smooth scroll (Contact / Hire Me / nav links)
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+section[id] {
+    scroll-margin-top: 0;
+}
+
+/* ==========================================================================
+   Gallery modal (Table of Content)
+   ========================================================================== */
+.gallery-modal {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.gallery-modal.is-open {
+    opacity: 1;
+}
+.gallery-panel {
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.gallery-modal.is-open .gallery-panel {
+    transform: none;
+}
+.gallery-stage > * {
+    animation: galleryIn 0.35s ease both;
+}
+@keyframes galleryIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .gallery-modal,
+    .gallery-panel,
+    .gallery-stage > * { transition: none; animation: none; }
+}
